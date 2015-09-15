@@ -1,0 +1,15 @@
+{
+    "lastVersion": "3.3.5",
+    "cdn": "//maxcdn.bootstrapcdn.com/bootstrap/{{version}}/",
+    "files": {
+        "css/bootstrap.css": "css",
+        "css/bootstrap.min.css": "min.css",
+        "js/bootstrap.js": "js",
+        "js/bootstrap.min.js": "min.js",
+        "fonts/glyphicons-halflings-regular.eot": null,
+        "fonts/glyphicons-halflings-regular.woff": null,
+        "fonts/glyphicons-halflings-regular.woff2": null,
+        "fonts/glyphicons-halflings-regular.ttf": null,
+        "fonts/glyphicons-halflings-regular.svg": null
+    }
+}

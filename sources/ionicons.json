@@ -1,0 +1,13 @@
+{
+    "lastVersion": "2.0.1",
+    "cdn": "//code.ionicframework.com/ionicons/{{version}}/",
+    "files": {
+        "css/ionicons.css": "css",
+        "css/ionicons.min.css": "min.css",
+        "fonts/ionicons.eot": null,
+        "fonts/ionicons.woff": null,
+        "fonts/ionicons.woff2": null,
+        "fonts/ionicons.ttf": null,
+        "fonts/ionicons.svg": null
+    }
+}

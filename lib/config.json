@@ -1,0 +1,20 @@
+{
+    "cdns": {
+        "cdnjs": "//cdnjs.cloudflare.com/ajax/libs/{{cdnName}}/{{version}}/",
+        "google": "//ajax.googleapis.com/ajax/libs/{{cdnName}}/{{version}}/"
+    },
+    "typeInfos":[
+        { "isCdn": true, "name": "js", "type": "js" },
+        { "isCdn": true, "name": "min.js", "type": "js" },
+        { "isCdn": true, "name": "css", "type": "css" },
+        { "isCdn": true, "name": "min.css", "type": "css" },
+        { "isCdn": false, "name": "js", "type": "js" },
+        { "isCdn": false, "name": "min.js", "type": "js" },
+        { "isCdn": false, "name": "css", "type": "css" },
+        { "isCdn": false, "name": "min.css", "type": "css" }
+    ],
+    "scripts" : {
+        "css": "<link rel=\"stylesheet\" href=\"{{url}}\" auto-generated=\"true\">",
+        "js": "<script src=\"{{url}}\" auto-generated=\"true\"></script>"
+    }
+}

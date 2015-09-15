@@ -1,0 +1,28 @@
+{
+    "isntall": {
+        "dir": "test/dist",
+        "url": "/dist",
+        "name": "{{name}}-{{version}}",
+        "force": false
+    },
+    "generate": {
+        "dir": "test/inc",
+        "name": "{{type}}.hbs",
+        "scripts": {
+        }
+    },
+    "common": {
+        "jquery": "1.11.3",
+        "jquery-ui": "1.11.4",
+        "bootstrap": "3.3.5,theme",
+        "font-awesome": "4.4.0",
+        "ionicons": "2.0.1",
+        "fastclick": "1.0.6",
+        "jquery-sparklines": "2.1.2",
+        "jquery-slimscroll": "1.3.6",
+        "adminlte": "2.3.0"
+    },
+    "optional": {
+        "ckeditor": "4.5.3,package=basic"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "lastVersion": "2.1.2",
+    "cdn": "cdnjs",
+    "files": {
+        "jquery.sparklines.js": "js",
+        "jquery.sparklines.min.js": "min.js"
+    }
+}

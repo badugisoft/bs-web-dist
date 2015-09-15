@@ -1,0 +1,9 @@
+{
+    "lastVersion": "1.11.4",
+    "cdn": "//code.jquery.com/ui/{{version}}/",
+    "files": {
+        "jquery-ui.js": "js",
+        "jquery-ui.min.js": "min.js",
+        "jquery-ui.min.map": null
+    }
+}

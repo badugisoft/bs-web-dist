@@ -1,0 +1,13 @@
+{
+    "lastVersion": "4.4.0",
+    "cdn": "//maxcdn.bootstrapcdn.com/font-awesome/{{version}}/",
+    "files": {
+        "css/font-awesome.css": "css",
+        "css/font-awesome.min.css": "min.css",
+        "fonts/fontawesome-webfont.eot": null,
+        "fonts/fontawesome-webfont.woff": null,
+        "fonts/fontawesome-webfont.woff2": null,
+        "fonts/fontawesome-webfont.ttf": null,
+        "fonts/fontawesome-webfont.svg": null
+    }
+}

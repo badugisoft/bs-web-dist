@@ -1,0 +1,8 @@
+{
+    "lastVersion": "3.3.5",
+    "cdn": "//maxcdn.bootstrapcdn.com/bootstrap/{{version}}/",
+    "files": {
+        "css/bootstrap-theme.css": "css",
+        "css/bootstrap-theme.min.css": "min.css"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "lastVersion": "2.0.4",
+    "cdn": "cdnjs",
+    "cdnName": "jvectormap",
+    "files": {
+        "jquery-jvectormap.js": "js",
+        "jquery-jvectormap.min.js": "min.js"
+    }
+}

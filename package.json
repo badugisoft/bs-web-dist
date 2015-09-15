@@ -1,0 +1,36 @@
+{
+  "name": "tinyweb-dist",
+  "version": "0.0.1",
+  "description": "Download third-party js and css.",
+  "main": "index.js",
+  "bin": {
+    "tinyweb-dist": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/badugisoft/tinyweb-dist.git"
+  },
+  "keywords": [
+    "third-party",
+    "js",
+    "css"
+  ],
+  "author": "Andrew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/badugisoft/tinyweb-dist/issues"
+  },
+  "homepage": "https://github.com/badugisoft/tinyweb-dist",
+  "dependencies": {
+    "async": "1.4.2",
+    "commander": "2.8.1",
+    "extend": "3.0.0",
+    "fs-extra": "0.24.0",
+    "request": "2.62.0",
+    "temp": "0.8.3",
+    "unzip": "0.1.11"
+  }
+}

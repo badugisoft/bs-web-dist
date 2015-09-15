@@ -1,0 +1,9 @@
+{
+    "lastVersion": "2.1.4",
+    "cdn": "//code.jquery.com/",
+    "files": {
+        "jquery-{{version}}.js": "js",
+        "jquery-{{version}}.min.js": "min.js",
+        "jquery-{{version}}.min.map": null
+    }
+}
