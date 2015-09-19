@@ -1,5 +1,5 @@
 {
-    "isntall": {
+    "install": {
         "dir": "test/dist",
         "url": "/dist",
         "name": "{{name}}-{{version}}",

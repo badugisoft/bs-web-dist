@@ -17,7 +17,7 @@ temp.track();
 var setting = require(path.resolve(process.argv[2]));
 var force = process.argv[3] ?
         process.argv[3] === 'force' :
-        setting.isntall.force === true;
+        setting.install.force === true;
 
 function getSource(name) {
     try {
@@ -80,7 +80,7 @@ function install(data, callback) {
 
     console.log('+ {{name}}-{{version}}'.format(params));
 
-    var targetDir = path.join(path.resolve(setting.isntall.dir), setting.isntall.name).format(params);
+    var targetDir = path.join(path.resolve(setting.install.dir), setting.install.name).format(params);
     if (force === false && fs.existsSync(targetDir)) {
         console.log('  -', 'skipped');
         return callback();
@@ -180,7 +180,7 @@ function generate(typeInfo, data) {
         if (typeNames.indexOf(typeInfo.name) !== -1) {
             var url = typeInfo.isCdn && source.cdn ?
                 (source.cdn + filePath).format(params) :
-                (setting.isntall.url + '/' + setting.isntall.name + '/' + filePath).format(params);
+                (setting.install.url + '/' + setting.install.name + '/' + filePath).format(params);
 
             result += scripts[typeInfo.type].format({ url: url }) + '\n';
         }

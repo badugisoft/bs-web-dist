@@ -1,17 +1,17 @@
 {
-  "name": "tinyweb-dist",
-  "version": "0.0.1",
+  "name": "bs-web-dist",
+  "version": "0.0.2",
   "description": "Download third-party js and css.",
   "main": "index.js",
   "bin": {
-    "tinyweb-dist": "index.js"
+    "bs-web-dist": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/badugisoft/tinyweb-dist.git"
+    "url": "https://github.com/badugisoft/bs-web-dist.git"
   },
   "keywords": [
     "third-party",
@@ -21,9 +21,9 @@
   "author": "Andrew",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/badugisoft/tinyweb-dist/issues"
+    "url": "https://github.com/badugisoft/bs-web-dist/issues"
   },
-  "homepage": "https://github.com/badugisoft/tinyweb-dist",
+  "homepage": "https://github.com/badugisoft/bs-web-dist",
   "dependencies": {
     "async": "1.4.2",
     "commander": "2.8.1",
