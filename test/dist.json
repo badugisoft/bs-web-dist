@@ -1,12 +1,11 @@
 {
     "install": {
-        "dir": "test/dist",
+        "dir": "dist",
         "url": "/dist",
-        "name": "{{name}}-{{version}}",
-        "force": false
+        "name": "{{name}}-{{version}}"
     },
     "generate": {
-        "dir": "test/inc",
+        "dir": "inc",
         "name": "{{type}}.hbs",
         "scripts": {
         }

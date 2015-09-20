@@ -3,11 +3,7 @@
     "download": {
         "url": "https://github.com/almasaeed2010/AdminLTE/archive/v{{version}}.zip",
         "copy": {
-            "*/dist/css/*.css": "css",
-            "*/dist/css/skin/*.css": "css/skin",
-            "*/dist/img/boxed-bg.jpg": "img",
-            "*/dist/js/app.js": "js",
-            "*/dist/js/app.min.js": "js"
+            "[^/]+/dist/(.+)": "{{1}}"
         }
     },
     "files": {

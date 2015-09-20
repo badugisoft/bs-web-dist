@@ -6,18 +6,27 @@ var fs = require('fs-extra');
 var extend = require('extend');
 var unzip = require('unzip');
 var temp = require('temp');
+var program = require('commander');
 
 require(path.resolve(__dirname, 'lib/polyfill'));
 
 var download = require(path.resolve(__dirname, 'lib/download'));
 var config = require(path.resolve(__dirname, 'lib/config.json'));
+var pkg = require(path.resolve(__dirname, 'package.json'));
+
+program
+    .version(pkg.version)
+    .option('-f, --force', 'Force update')
+    .option('-c, --config [config json]', 'Config json path')
+    .option('-g, --generateOnly')
+    .option('-i, --installOnly')
+    .parse(process.argv);
 
 temp.track();
 
-var setting = require(path.resolve(process.argv[2]));
-var force = process.argv[3] ?
-        process.argv[3] === 'force' :
-        setting.install.force === true;
+var setting = require(path.resolve(program.config || 'dist.json'));
+var force = program.force === true;
+var scripts = extend(true, config.scripts, setting.generate.scripts || {} );
 
 function getSource(name) {
     try {
@@ -37,8 +46,6 @@ function getSource(name) {
     }
     return null;
 }
-
-var scripts = extend(true, config.scripts, setting.generate.scripts || {} );
 
 function processSettingList(list) {
     var newList = [];
@@ -92,7 +99,7 @@ function install(data, callback) {
         var filters = [];
         for (var src in source.download.copy) {
             filters.push({
-                regexp: new RegExp('^' + src.replace(/\*\*/g, '.*').replace(/\*/g, '[^/]*') + '$'),
+                regexp: new RegExp('^' + src + '$'),
                 target: source.download.copy[src]
             });
         }
@@ -114,11 +121,17 @@ function install(data, callback) {
                     }
 
                     if (!filters.some(function(filter){
-                        if (!entry.path.match(filter.regexp)) {
+                        var match = entry.path.match(filter.regexp);
+                        if (!match) {
                             return false;
                         }
 
-                        filePath = path.join(targetDir, filter.target, path.basename(entry.path)).format(params);
+                        var matchParams = {};
+                        for (var i = 0; i < match.length; ++i) {
+                            matchParams[i] = match[i];
+                        }
+
+                        filePath = path.join(targetDir, filter.target).format(extend(true, params, matchParams));
                         console.log('  -', filePath.substr(targetDir.length + 1));
                         fs.ensureDir(path.dirname(filePath), function(err){
                             if (err) {
@@ -189,6 +202,10 @@ function generate(typeInfo, data) {
 }
 
 function installPackages(name, packages, callback) {
+    if (program.generateOnly === true) {
+        return callback();
+    }
+
     console.info('* install ' + name + ' packages');
 
     async.eachSeries(packages, function(data, callback){
@@ -197,6 +214,10 @@ function installPackages(name, packages, callback) {
 }
 
 function generateScripts(name, packages, callback) {
+    if (program.installOnly === true) {
+        return callback();
+    }
+
     console.info('* generate scripts for ' + name + ' packages');
 
     async.eachSeries(config.typeInfos, function(typeInfo, callback){

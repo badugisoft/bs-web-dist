@@ -1,6 +1,6 @@
 {
   "name": "bs-web-dist",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Download third-party js and css.",
   "main": "index.js",
   "bin": {

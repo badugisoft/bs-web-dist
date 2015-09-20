@@ -6,9 +6,10 @@
     "download": {
         "url": "http://download.cksource.com/CKEditor/CKEditor/CKEditor%20{{version}}/ckeditor_{{version}}_{{package}}.zip",
         "copy": {
-            "**": "."
+            "ckeditor/(.+)": "{{1}}"
         }
     },
     "files": {
+        "ckeditor.js": ["min.js", "js"]
     }
 }
